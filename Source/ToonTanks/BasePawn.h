@@ -35,9 +35,14 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AProjectile> ProjectileClass;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = Projectile)
 	class UParticleSystem* DeathParticles;
 
+	UPROPERTY(EditAnywhere, Category = Projectile)
+	class USoundBase* DeathSound;
+
+	UPROPERTY(EditAnywhere, Category = Projectile)
+	TSubclassOf<class UCameraShakeBase>DeathCameraShakeClass;
 public:
 	// Called every frame
 };
